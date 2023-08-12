@@ -37,3 +37,4 @@ Após isso, a API AMQP do RabbitMQ estará disponível no localhost na porta 300
 - Ao realizar uma requisição, será buscado todas as filas do departamento solicitado, onde serão filtradas pela menor quantidade de mensagens, a requisição será enviada à fila que contenha a menor quantidade
 - Cada mensagem consumida da fila, não será excluída da fila por padrão, essa configuração pode ser editada no arquivo ```create-atendant.ts```, adicionando ```autoDelete: true``` como segundo argumento da função ```assertQueue```
 - Esse projeto foi idealizado para funcionar como uma biblioteca, portanto, poderá ser utilizado para a criação de REST APIs separadamente
+- Para ser utilizado como biblioteca, o projeto que a está utilizando o invext-core, deverá possuir um arquivo ```.env``` na raíz do projeto
